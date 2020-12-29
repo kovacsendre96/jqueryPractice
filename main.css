@@ -19,4 +19,13 @@ li{
  margin: auto;
     
 }
+.edit_item {
+    display: inline-block;
+  }
+
+  .arrows{
+      float: right;
+      margin-left: 300px;
+      
+  }
 

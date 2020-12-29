@@ -1,0 +1,25 @@
+
+
+.wrapper    {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr) ;
+    grid-template-rows:200px 200px;
+}
+
+
+.square{
+    border:1px solid black;
+}
+
+.target{
+    width: 50px;
+    height: 50px;
+    border: 4px solid red;
+    border-radius: 50%;
+    
+}
+
+.twelve:hover{
+    cursor: pointer;
+    
+}

@@ -40,7 +40,7 @@ $(document).ready(function(){
      
      // filled the list item with their's  buttons and class names and input values
 
-     $(list_item).append(time,"   :   ",list_text,done_button,remove_button); 
+     $(list_item).append('<div class="edit_item" contenteditable="true">'+time+'</div>', "  ",'<div class="edit_item" contenteditable="true">'+list_text+'</div>',done_button,remove_button); 
 
      // finally fill the ul with list items but first check out what is written in the input
 
@@ -54,7 +54,7 @@ $(document).ready(function(){
       // If the input has some value  can go 
 
       else{
-     $("ul").append(list_item);
+     $("ol").append(list_item);
 
      // after clicked, clear the input field
      $("#input").val("");
@@ -66,24 +66,26 @@ $(document).ready(function(){
 
     
     $(".done").click(function(){
-
-      $(list_item).click(function(){
-        $(this).css("color","white")
-        $(this).css("text-decoration","line-through")
-      }); 
-    });
+      $(this).closest(list_item).css("color","white","text-decoration","line-through")
+     
+   });
     
     
    
     
     
-    $(".delete").click(function(){
-        $(list_item).click(function(){
-          $(this).remove()
-        }); 
-      });
-
+   $(".delete").click(function(){
+    $(this).closest(list_item).remove();
+ });
     }
+
+
+    $("#up").click(function(){
+      console.log($("#ol").lenght);
+
+      
+
+    });
 
       });// main function close
       
